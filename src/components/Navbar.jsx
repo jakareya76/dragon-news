@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import userIcon from "../assets/user.png";
 
 const Navbar = () => {
@@ -25,17 +26,29 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] gap-4 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>Home</li>
-            <li>About</li>
-            <li>Career</li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/career">Career</NavLink>
+            </li>
           </ul>
         </div>
       </div>
       <div className="hidden navbar-center lg:flex">
         <ul className="gap-5 px-1 menu menu-horizontal">
-          <li>Home</li>
-          <li>About</li>
-          <li>Career</li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/career">Career</NavLink>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">

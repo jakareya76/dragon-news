@@ -15,8 +15,6 @@ const LeftSideNav = () => {
     getCategories();
   }, []);
 
-  console.log(categories);
-
   return (
     <div>
       <h2 className="text-2xl font-bold">All Categories</h2>

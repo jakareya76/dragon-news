@@ -6,6 +6,8 @@ import Career from "../pages/Career";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 
+import AuthPrivateRoute from "./AuthPrivateRoute";
+
 export const routes = createBrowserRouter([
   {
     path: "/",
@@ -25,11 +27,19 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: (
+          <AuthPrivateRoute>
+            <Login />
+          </AuthPrivateRoute>
+        ),
       },
       {
         path: "/sign-up",
-        element: <SignUp />,
+        element: (
+          <AuthPrivateRoute>
+            <SignUp />
+          </AuthPrivateRoute>
+        ),
       },
     ],
   },
